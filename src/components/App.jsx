@@ -20,8 +20,6 @@ export class App extends Component {
     ...INITIAL_STATE,
   };
 
-  generateUuid = uuidv4();
-
   addContact = ({ name, number }) => {
     const lowerCaseName = name.toLowerCase();
     let isAdded = false;
@@ -39,10 +37,11 @@ export class App extends Component {
       return;
     }
     const contact = {
-      id: this.generateUuid,
+      id: uuidv4(),
       name: name,
       number: number,
     };
+    console.log(contact);
     this.setState(prevState => ({
       contacts: [...prevState.contacts, contact],
     }));
@@ -74,10 +73,7 @@ export class App extends Component {
     return (
       <div className={css.container}>
         <h1 className={css.titles}>Phonebook</h1>
-        <ContactForm
-          generateId={this.generateUuid}
-          onSubmit={this.addContact}
-        />
+        <ContactForm generateId={uuidv4()} onSubmit={this.addContact} />
         <h2 className={css.titles}>Contacts</h2>
         <Filter value={filter} onChange={this.handleFilter} />
         <ContactList
