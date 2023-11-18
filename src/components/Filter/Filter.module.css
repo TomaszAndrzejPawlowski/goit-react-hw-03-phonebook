@@ -1,0 +1,11 @@
+.filterDiv {
+  margin: 0 20px;
+}
+.filterDiv__label {
+  display: flex;
+  flex-direction: column;
+}
+.filterDiv__input {
+  max-width: 170px;
+  margin-top: 10px;
+}

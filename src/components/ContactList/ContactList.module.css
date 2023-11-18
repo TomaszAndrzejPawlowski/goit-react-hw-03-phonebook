@@ -1,0 +1,9 @@
+.listItem {
+  display: flex;
+}
+.listItem button {
+  width: auto;
+  height: fit-content;
+  margin: auto 15px;
+  border-radius: 30%;
+}
