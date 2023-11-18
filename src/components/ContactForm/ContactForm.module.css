@@ -3,6 +3,10 @@
   align-items: flex-start;
   flex-direction: column;
   margin: 15px;
+  border: 1px solid #000;
+  padding: 10px;
+  max-width: 300px;
+  background-color: #fff;
 }
 .contactForm__input {
   margin-bottom: 20px;
